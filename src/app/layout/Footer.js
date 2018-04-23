@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="container">
       <div className="content has-text-centered">
         <p>
-          Built on <strong>React</strong> with <strong>Bulma</strong> by <a href="/">Studio Norrish</a>
+          Built on <strong>React</strong> with <strong>Bulma</strong> by <a>Studio Norrish</a>
           <br />
           Copyright 2018
         </p>

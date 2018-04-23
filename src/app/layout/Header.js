@@ -1,6 +1,7 @@
 // MAIN
 import React, { Component } from "react"
 import { connect } from "react-redux"
+import { NavLink } from 'react-router-dom'
 
 const mapStateToProps = state => ({
 
@@ -24,13 +25,11 @@ class Header extends Component
 
   render() {
     return (
-      <nav className="navbar"
-          aria-label="main navigation"
-          style={{
-            borderBottom: 'solid 1px #dddddd',
-          }}>
+      <nav 
+        className="navbar"
+        aria-label="main navigation">
         <div className="navbar-brand">
-          <a className="navbar-item">
+          <NavLink to="/" className="navbar-item">
             <img
               style={{
                 borderTopLeftRadius: '50%',
@@ -41,8 +40,8 @@ class Header extends Component
               }}
               src=""
               width="30px" alt="" />
-            <span>StudioNorrish</span>
-          </a>
+            <span>Studio Norrish</span>
+          </NavLink>
           <button className="button navbar-burger" onClick={this.toggleNav}>
             <span></span>
             <span></span>
@@ -55,13 +54,19 @@ class Header extends Component
               <span className="icon has-text-primary" style={{ marginRight: 5 }}>
                 <i className="fas fa-code"></i>
               </span>
-              Code Blog
+              Story
             </a>
-            <a className="navbar-item">
-              <span className="icon" style={{ marginRight: 5 }}>
-                <i className="fab fa-lg fa-medium"></i>
+            <NavLink to="/blog" className="navbar-item">
+              <span className="icon has-text-primary" style={{ marginRight: 5 }}>
+                <i className="fas fa-code"></i>
               </span>
-              Medium
+              Blog
+            </NavLink>
+            <a className="navbar-item">
+              <span className="icon has-text-primary" style={{ marginRight: 5 }}>
+                <i className="fas fa-code"></i>
+              </span>
+              Contact
             </a>
             <div className="navbar-item has-dropdown is-hoverable">
               <a className="navbar-link" >
@@ -73,28 +78,20 @@ class Header extends Component
                 </a>
                 <hr className="navbar-divider" />
                 <a className="navbar-item">
-                  This Site
-                </a>
-                <a className="navbar-item" >
-                  Angular The React Way
+                  Studio Norrish
                 </a>
               </div>
             </div>
           </div>
           <div className="navbar-end">
-            <a className="navbar-item" href="/">
-              <span className="icon">
+            <a className="navbar-item">
+              <span className="icon" style={{ color: '#000000' }}>
                 <i className="fab fa-lg fa-github"></i>
               </span>
             </a>
-            <a className="navbar-item" href="/">
-              <span className="icon has-text-info" style={{ color: '#0084FF' }}>
+            <a className="navbar-item">
+              <span className="icon" style={{ color: '#0084FF' }}>
                 <i className="fab fa-lg fa-twitter"></i>
-              </span>
-            </a>
-            <a className="navbar-item" href="/">
-              <span className="icon" style={{ color: '#0077B5' }}>
-                <i className="fab fa-lg fa-linkedin"></i>
               </span>
             </a>
           </div>

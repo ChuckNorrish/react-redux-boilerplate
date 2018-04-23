@@ -11,6 +11,14 @@ $purple-invert: findColorInvert($purple);
 $addColors: ('purple':($purple, $purple-invert),)
 $colors: map-merge($colors, $addColors)
 
-// 4. Import Bulma
+
+// 4 Set initial preferences
+body 
+  font-family: 'Roboto', sans-serif !important
+
+
+
+
+// 5. Import Bulma
 @import 'bulma/bulma'
 @import '~bulma-extensions/dist/bulma-extensions.min.css'
